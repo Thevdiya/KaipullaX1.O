@@ -2,6 +2,7 @@ from base64 import b64encode
 from requests import utils as rutils
 from re import match as re_match, search as re_search, split as re_split
 from time import sleep, time
+import os
 from os import path as ospath, remove as osremove, listdir, walk
 from shutil import rmtree
 from threading import Thread
@@ -73,6 +74,7 @@ class MirrorListener:
             size = download.size_raw()
             if name == "None" or self.isQbit or not ospath.exists(f'{DOWNLOAD_DIR}{self.uid}/{name}'):
                 name = listdir(f'{DOWNLOAD_DIR}{self.uid}')[-1]
+            name = name.replace("www.1TamilMV.cloud", "@KaipullaVadiveluOffl").replace("www.tamilblasters.com", "@KaipullaVadiveluOffl")    
             m_path = f'{DOWNLOAD_DIR}{self.uid}/{name}'
         if self.isZip:
             try:
@@ -138,6 +140,10 @@ class MirrorListener:
                 path = f'{DOWNLOAD_DIR}{self.uid}/{name}'
         else:
             path = f'{DOWNLOAD_DIR}{self.uid}/{name}'
+        if "www.1TamilMV.cloud" in path or "www.tamilblasters.com" in path:
+            new_path = path.replace("www.1TamilMV.cloud", "@KaipullaVadiveluOffl").replace("www.tamilblasters.com", "@KaipullaVadiveluOffl")
+            os.rename(path, new_path)
+            path = new_path
         up_name = PurePath(path).name
         up_path = f'{DOWNLOAD_DIR}{self.uid}/{up_name}'
         if self.isLeech and not self.isZip:
