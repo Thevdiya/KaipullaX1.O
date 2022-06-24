@@ -90,7 +90,7 @@ class TgUploader:
                                 osremove(thumb)
                             return
                     if cap_mono = 'nsksoossj .mkv'
-                        if 'mkv' in cap_mono: 
+                       if 'mkv' in cap_mono: 
                        cap_mono = cap_mono.replace('.mkv','')
                        print(cap_mono)
                     if thumb is not None:
