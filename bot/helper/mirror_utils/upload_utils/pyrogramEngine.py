@@ -91,8 +91,8 @@ class TgUploader:
                             return
                     if cap_mono = 'nsksoossj .mkv'
                        if 'mkv' in cap_mono: 
-                       cap_mono = cap_mono.replace('.mkv','')
-                       print(cap_mono)
+                           cap_mono = cap_mono.replace('.mkv','')
+                             print(cap_mono)
                     if thumb is not None:
                         img = Image.open(thumb)
                         width, height = img.size
