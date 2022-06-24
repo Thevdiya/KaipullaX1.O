@@ -68,10 +68,8 @@ class TgUploader:
 
     def __upload_file(self, up_path, file_, dirpath):
         if CUSTOM_FILENAME is not None:
-        if cap_mono = "nsksoossj .mkv"
         if ".mkv" in cap_mono: 
             cap_mono = cap_mono.replace(".mkv","")
-            print(cap_mono)
             cap_mono = f"{CUSTOM_FILENAME} <b>{file_}\n\n 📥 JOIN : @KaipullaVadiveluoffl</b>"
             file_ = f"{CUSTOM_FILENAME} {file_}"
             new_path = ospath.join(dirpath, file_)
