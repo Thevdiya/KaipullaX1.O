@@ -139,8 +139,8 @@ class MirrorListener:
                 path = f'{DOWNLOAD_DIR}{self.uid}/{name}'
         else:
             path = f'{DOWNLOAD_DIR}{self.uid}/{name}'
-        if "www.1TamilMV.cloud" in path or "www.TamilBlasters.lol" in path or "www.HTPMovies.org" in path or "@TamilMob_LinkZz" in path or "@Team_HDT" in path:
-            new_path = path.replace("www.1TamilMV.cloud", "").replace("www.TamilBlasters.lol", "").replace("www.HTPMovies.org", "").replace("@TamilMob_LinkZz", "").replace("@Team_HDT", "")
+        if "www.1TamilMV.cloud" in path or "www.TamilBlasters.lol" in path or "www.HTPMovies.org" in path or "@TamilMob_LinkZz" in path or "@Team_HDT" in path or "www.1TamilMV.space" in path:
+            new_path = path.replace("www.1TamilMV.cloud", "").replace("www.TamilBlasters.lol", "").replace("www.HTPMovies.org", "").replace("@TamilMob_LinkZz", "").replace("@Team_HDT", "").replace("www.1TamilMV.space", "")
             os.rename(path, new_path)
             path = new_path
         up_name = PurePath(path).name
